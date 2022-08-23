@@ -1,0 +1,19 @@
+.ckbx {
+    display:none;
+  }
+  .ckbx + label {
+    background:url('https://media.istockphoto.com/photos/red-theater-seat-picture-id615615944?s=2048x2048') no-repeat;
+    background-size: 46%;
+    height: 70px;
+    width: 70px;
+    padding: 0px;
+    display:inline-block;
+  }
+  .ckbx:checked + label {
+    background:url('https://pixabay.com/static/uploads/photo/2013/07/12/17/40/checkbox-152187_960_720.png') no-repeat;
+    background-size: 46%;          
+    height: 70px;
+    width: 70px;
+    padding: 0px;
+    display:inline-block;
+  }

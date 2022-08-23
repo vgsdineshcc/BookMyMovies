@@ -1,0 +1,28 @@
+<div style="background-color: ghostwhite; height: 500%; width: 100%;" >
+    <app-header></app-header>
+    <div class="container" style="height: 540px" align="center" > 
+        
+        <div *ngFor="let result of movieAllocationbyidService">
+            
+                <div class="row col-md-6 col-md-offset-2 custyle">  
+                 <table class="table table-striped custab">
+                    <tr>
+                        <img class="img-fluid" src={{result.moviePath}} title={{result.movieName}}/>      
+                    </tr>
+                    <tr>Movie Name : {{result.movieName}}</tr>
+                    <tr>Theater Name : {{result.theaterDetails.tname}}</tr>
+                    <tr>Screen Name : {{result.screenDetails.sname}}</tr>
+                    <tr>Movie Date : {{result.movieDT  | date :'dd/MM/yy'}} </tr>
+                    <tr>TimeSlots : {{result.timeSlots}}</tr>
+                    <tr>Movie Cast:{{result.cast}} </tr>
+                    <tr>Movie Language: {{result.language}}</tr>
+                    <tr>Ticket Price: {{result.movieCost | currency: 'INR' }}</tr>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Book Movie" (click)="bookMovie(result)">
+                    </div>
+                </table>
+                </div>
+            </div>
+    </div>
+    <app-footer></app-footer>
+  </div>

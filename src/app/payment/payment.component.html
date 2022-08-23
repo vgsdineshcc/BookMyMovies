@@ -1,0 +1,31 @@
+<div style="background-color: ghostwhite; height: 500%; width: 100%;" >
+    <app-header></app-header>
+    <div class="container" style="height: 540px"> 
+        <div class="container">
+        <div class="row">
+        Bank Name : <select name="bankName">
+        <option value="ICICI">ICICI BANK</option>
+        <option value="HDFC">HDFC BANK</option>
+        <option value="SBI">SBI BANK</option>
+        <option value="SC">Standard Chatered BANK</option>
+        <option value="KVB">KVB BANK</option>
+        </select>
+        </div>
+        <div class="row">
+        cardNumber:<input type="text" name="cardNumber">
+        </div>
+        <div class="row">
+            CVV:<input type="text" name="CVV">
+        </div>
+        <div class="row">
+            UPI:<input type="text" name="upiId">
+        </div>
+        <br/>
+        <br/>
+        <div class="row" align="center">
+            <input class="btn btn-success" type="button" name="submit_reg" value="Pay to book the Ticket" (click)="BookTicket();">
+        </div>
+    </div>
+    </div>
+    <app-footer></app-footer>
+  </div>

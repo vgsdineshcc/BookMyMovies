@@ -1,0 +1,23 @@
+<div style="background-color: ghostwhite; height: 500%; width: 100%;" >
+<app-header></app-header>
+<div class="container" style="height: 540px" align="center">
+    <div class="row col-md-6 col-md-offset-2 custyle">  
+        <table class="table table-striped custab">
+           <tr>
+               <img class="img-fluid" src={{tickeDetails.movieAllocation.moviePath}} title={{tickeDetails.movieAllocation.movieName}}/>      
+           </tr>
+           <tr>Ticket Booking ID : {{tickeDetails.bid}}</tr>
+           <tr>Seat NO : {{tickeDetails.seatnumber}}</tr>
+           <tr>Movie Name : {{tickeDetails.movieAllocation.movieName}}</tr>
+           <tr>Theater Name : {{tickeDetails.theaterDetails.tname}}</tr>
+           <tr>Screen Name : {{tickeDetails.screenDetails.sname}}</tr>
+           <tr>Movie Date : {{tickeDetails.movieAllocation.movieDT | date :'dd/MM/yy'}} </tr>
+           <tr>TimeSlots : {{tickeDetails.movieAllocation.timeSlots}}</tr>
+           <tr>Movie Cast:{{tickeDetails.movieAllocation.cast}} </tr>
+           <tr>Movie Language: {{tickeDetails.movieAllocation.language}}</tr>
+           <tr>Ticket Price: {{tickeDetails.movieAllocation.movieCost | currency: 'INR'}}</tr>
+       </table>
+       </div>
+</div>
+<app-footer></app-footer>
+</div>

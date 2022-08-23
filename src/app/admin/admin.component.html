@@ -1,0 +1,56 @@
+<div style="background-color: ghostwhite; height: 500%; width: 100%;" >
+    <div class="control-group">
+        <app-header></app-header>
+        <div class="container" style="height: 540px">  
+                <div class="col-md-0" class="h-100 d-flex align-items-center justify-content-lg-start">
+                    <form enctype="multipart/form-data"><table><tr><td>
+                                <label>Movie Name*</label> : <input required type="text" [(ngModel)]="movieAllcation.movieName" name="movieAllcation.movieName" id="movieName"
+                                class="form-control movieName" maxlength="40" placeholder="Enter Movie Name" />
+                                <label>Movie Cost*</label> : <input required type="text" [(ngModel)]="movieAllcation.movieCost" name="movieCost" id="movieCost"
+                                    class="form-control movieCost" maxlength="40" placeholder="Enter Movie Cost" />
+                                <label>Movie Date*</label> : <input required type="date" [(ngModel)]="movieAllcation.movieDT"  name="movieDate" id="movieDate"
+                                    class="form-control movieDate" maxlength="40" />
+                                <label>Movie Start TimeSlot* :</label> : <input required type="time" [(ngModel)]="movieAllcation.timeSlots"  name="movieStartTime" id="movieStartTime"
+                                    class="form-control movieStartTime" maxlength="40" /> 
+                                <label>Movie End TimeSlot* :</label> <input required type="time" [(ngModel)]="movieEndTime"  name="movieEndTime" id="movieEndTime"
+                                    class="form-control movieEndTime" maxlength="40" />
+                                <label>Movie Image*</label> : <input required type="file" (change)="readUrl($event)"  [(ngModel)]="movieAllcation.moviePath" name="movieImage" id="movieImage"
+                                    class="form-control movieImage"  /> 
+                                    <!--<img [src]="url">-->
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td>
+                                <label>Movie Cast*</label> : <input required type="text"  [(ngModel)]="movieAllcation.cast" name="movieCast" id="movieCast"
+                                    class="form-control movieCast" maxlength="40" placeholder="Enter Movie Directer Name"/>
+                                <label>Movie Language*</label> : <input required type="text"  [(ngModel)]="movieAllcation.language" name="movieLang" id="movieLang"
+                                    class="form-control movieLang" maxlength="40" placeholder="Enter Movie Language"/>
+                                <label>Theater Name*</label> : <input required type="text"  [(ngModel)]="movieAllcation.theaterDetails.tname" name="movieAllcation.theaterDetails.tname" id="theaterName"
+                                    class="form-control theaterName" maxlength="40" placeholder="Enter Theater Name"/>
+                                <label>Screen Name*</label> : <input required type="text"  [(ngModel)]="movieAllcation.screenDetails.sname" name="screenName" id="screenName"
+                                    class="form-control screenName" maxlength="40" placeholder="Enter Screen Name"/>
+                                 <label>No OF Seats*</label> : <input required type="text"  [(ngModel)]="movieAllcation.screenDetails.noofSeat" name="noOfSeats" id="noOfSeats"
+                                    class="form-control noOfSeats" maxlength="40" placeholder="Enter Screen Name"/>
+                                <br/>
+                                <div class="form-group">
+                                   <!--  <button (click)='registerMovie()' type="button">
+                                        <div>
+                                            Submit
+                                        </div>
+                                      </button>-->
+                                   <input class="btn btn-success" type="submit" name="submit_reg" value="submit"   (click)="registerMovie()">
+                                </div>
+                               
+                                </td>
+                                </tr>
+                            </table>
+                        
+                    </form><!-- ends register form -->
+                    <!-- second for to fiter user-->
+                </div><!-- ends col-6 -->
+        
+            </div>
+        </div>
+        
+        <app-footer></app-footer>
+    
+    </div>

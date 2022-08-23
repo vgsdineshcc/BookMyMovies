@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8" class="h-100 d-flex align-items-center justify-content-center">
+            
+            <form>
+                <fieldset>             
+<div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5" >
+        <img src="../assets/BookMyMovie.jpg"
+          class="d-inline-block align-top disabled" alt="Book My Movies" > 
+      </div></div>
+    </div>
+      <legend class="text-center" >Valid information is required to register. <span class="req"><small>
+        required *</small></span></legend>
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> Name: <small>This will be your login user
+                                name</small> </label>
+                        <input required type="text" [(ngModel)]="uname" name="name" id="name"
+                            class="form-control phone" maxlength="20" placeholder="Enter your fullname..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname"><span class="req">* </span> Email: </label>
+                        <input class="form-control" type="text" [(ngModel)]="email" name="email" id="txt" required
+                            placeholder="Enter valid email address" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname"><span class="req">* </span> Password : </label>
+                        <input class="form-control" type="text" [(ngModel)]="password" name="experience" id="experience"
+                            placeholder="Type your Password" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> Gender: </label>
+                        <!--<input class="form-control" required type="text" [(ngModel)]="gender" name="domain"
+                            id="email" placeholder="fullstack/backend/developer" />-->
+                            <select name="" [(ngModel)]="gender" class="form-control" id="gender" required >
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Not To Prefer</option>
+                            </select>
+                        <div class="status" id="status"></div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>

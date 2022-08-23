@@ -1,0 +1,91 @@
+<div style="background-color: ghostwhite; height: 500%; width: 100%;" >
+      <app-header></app-header>
+      <div class="container" style="height: 540px"> 
+        <div class="row">
+          <div id="custom-search-input">
+                           <div class="input-group col-md-12" style="text-align: center">
+                               <input type="text" class="search-query form-control" placeholder="Search With Movie Name"  name="userid" />
+                               <span class="input-group-btn">
+                                   <button class="btn btn-danger" type="button" value="Search">
+                                       <span class=" glyphicon glyphicon-search">Search</span>
+                                   </button>
+                               </span>
+                           </div>
+                       </div>
+</div>
+              <div id="carouselExampleIndicators" class="carousel slide w-100 p-3"  data-ride="carousel"
+             data-interval="2500">
+             <div class="carousel-indicators">
+               
+              </div>
+              <div class="carousel-inner">
+                  <div class="carousel-item" *ngFor="let result of movieAllocation; let i = index" [ngClass]="{'active': i === 0}">
+                   <img src={{result.moviePath}} title={{result.movieName}} class="d-block w-100"/>
+                   <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <h5>Movie Name:  {{result.movieName}}   Movie Cast:  {{result.cast}}</h5>
+                </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+             </div>        
+<!---------------------------Second Page-------------------------------------->
+             <div id="gallery" class="carousel slide" data-ride="false">
+              <div class="carousel-inner">
+                  <div class="carousel-item active" >
+                      <div class="row">
+                          <div class="col" *ngFor="let result of movieAllocation.slice(0,4); let i = index" >
+                              <img class="img-fluid" src={{result.moviePath}} title={{result.movieName}} />
+                              <div>
+                                <button (click)="getMovieDetailsbyId(result.movieId);"  style="color: forestgreen">Book Movie:{{result.movieName}}</button>
+                                <h5 style="color: forestgreen">Theater Name:{{result.theaterDetails.tname}} <br/> Screen Name:{{result.screenDetails.sname}}
+                                  <br/>Date:{{result.movieDT}} <br/>  Time:{{result.timeSlots}}
+                                  <br/> Ticket Price:{{result.movieCost}}</h5>
+                        </div>
+                            </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      
+                        <div class="col" *ngFor="let result of movieAllocation.slice(4,8); let i = index">
+                            <img class="img-fluid" src={{result.moviePath}} title={{result.movieName}}/>
+                            <div>
+                              <button (click)="getMovieDetailsbyId(result.movieId);"  style="color: forestgreen">Book Movie:{{result.movieName}}</button>
+                              <h5 style="color: forestgreen">Theater Name:{{result.theaterDetails.tname}} <br/> Screen Name:{{result.screenDetails.sname}}
+                                <br/>Date:{{result.movieDT}} <br/>  Time:{{result.timeSlots}}
+                                <br/> Ticket Price:{{result.movieCost}}</h5>
+                          </div></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                      <div class="col" *ngFor="let result of movieAllocation.slice(8,12); let i = index">
+                        <img class="img-fluid" src={{result.moviePath}} title={{result.movieName}}/>  
+                        <div>
+                            <button (click)="getMovieDetailsbyId(result.movieId);"  style="color: forestgreen">Book Movie:{{result.movieName}}</button>
+                            <h5 style="color: forestgreen">Theater Name:{{result.theaterDetails.tname}} <br/> Screen Name:{{result.screenDetails.sname}}
+                            <br/>Date:{{result.movieDT}} <br/>  Time:{{result.timeSlots}}
+                            <br/> Ticket Price:{{result.movieCost}}</h5>
+                    </div>
+                        </div>
+                  </div>
+              </div>
+              </div>
+            
+          
+              <a class="carousel-control-next" href="#gallery" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+              </a>
+          </div>  
+                 </div>
+  <app-footer></app-footer>
+</div>

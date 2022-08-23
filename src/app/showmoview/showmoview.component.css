@@ -1,0 +1,19 @@
+#slider .carousel-item {
+    height: 200px;
+  }
+  
+  .carousel-caption {
+    font-size: 15px;
+    color: aquamarine;
+  }
+  
+  .carousel-item>img {
+    width:800px;
+    height:150px;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: 100px;
+    display: inline-block;
+}
